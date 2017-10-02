@@ -1,0 +1,31 @@
+Programa precoporcent;
+
+   variáveis c:inteiro;
+             a,p,f:real;
+             cont:texto;
+Início
+
+   escreva(' ---------Calcular preco de produtos LOJA LUCAS------------- ');
+   cont:='s';
+   enquanto cont='s' faça
+   início
+   escreva(' Qual o custo do eletrodomestico (em reais) ? : ');
+   leia(c);
+   escreva(' Qual o acrescimo EM JUROS que leva o eletrodomestico ? : ');
+   leia(p);
+   a:=(p/100)* c;
+   f:=c+a;
+   escreva(' O preco final do eletrodomestico eh :',f);
+   escreva(' Deseja saber algum outro preco ? : (S/N)');
+   leia(cont);
+
+   fim;
+
+
+
+
+
+
+
+
+Fim.

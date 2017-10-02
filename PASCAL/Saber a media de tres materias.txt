@@ -1,0 +1,47 @@
+Programa Novo;
+
+ variáveis m,q,g,n:real;
+           a,cont:texto;
+Início
+   cont:='s';
+   enquanto cont='s' faça
+   início
+   escreva('-------------ESCOLA--LUCAS--------------- ');
+   escreva(' Digite o nome do aluno(a) : ');
+   leia(a);
+   escreva(' Nota obtida em Matematica pelo aluno(a) : ',a);
+   leia(m);
+   Enquanto m>10 faça
+   Início
+   escreva(' Impossivel, vamos ate a nota 10,digite a nota corretamente :');
+   leia(m);
+   fim;
+   escreva(' Nota obtida em Quimica pelo aluno(a) : ',a);
+   leia(q);
+   Enquanto q>10 faça
+   Início
+   escreva(' Impossivel, vamos ate a nota 10,digite a nota corretamente :');
+   leia(q);
+   fim;
+   escreva(' Nota obtida em Geografia pelo aluno(a) : ',a);
+   leia(g);
+   Enquanto g>10 faça
+   Início
+   escreva(' Impossivel, vamos ate a nota 10,digite a nota corretamente :');
+   leia(g);
+   fim;
+   n:=(m+q+g)/3;
+   Escreva(' Nota obtida por : ',a,' eh de ',n);
+   Se n>=7 então
+   escreva(' Portanto,',a,' foi aprovado pela escola .');
+   Se n<=5 então
+   escreva(' Portanto,',a,' foi reprovado pela escola .');
+   Se n>=5.1 então
+   Início
+   Se n<=6.9 então
+   escreva(' Portanto,',a,' ficou de recuperacao na escola .');
+   fim;
+   escreva(' Algum aluno a mais pra sabe a sua media ? (S/N) :');
+   leia(cont);
+   fim;
+Fim.

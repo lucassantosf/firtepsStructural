@@ -1,0 +1,45 @@
+Programa exercito;
+
+ variáveis   i,apto1,apto2,apto3,aptot:inteiro;
+             n,sa,resp:texto;
+
+Início
+   apto1:=1;
+   apto2:=1;
+   aptot:=0;
+   resp:='s';
+   enquanto resp='s' faça
+   Início
+   Início
+   escreva('  Digite o nome da pessoa :  ');
+   leia(n);
+   escreva('  Digite a idade de ',n,' em anos : ');
+   leia(i);
+   se i<18 então
+   apto1:=0;
+   Escreva('  Digite o estado da saude de ',n,' : ');
+   escreva('  B(Bom) ou R(Ruim) :');
+   leia(sa);
+   Enquanto (sa<>'b') e (sa<>'r') faça
+   Início
+   escreva(' Somente B(Bom) ou R(Ruim) : ');
+   leia(sa);
+   fim;
+   Se sa='r' então
+   apto2:=0;
+   apto3:=(apto1 + apto2);
+   Se apto3=2 então
+   Início
+   escreva(' Esta pessoa esta apta a servir o exercito .');
+   aptot:=aptot+1;
+   fim;
+   Se apto3<2 então
+   Início
+   escreva(' Esta pessoa ainda nao esta apta a servir.  ');
+   fim;
+   fim;
+   escreva(' Existe mais alguem a saber se estar apto ? (S/N)');
+   leia(resp);
+   fim;
+   escreva(' Estao aptas a servir o exercito  ',aptot,' pessoas .');
+Fim.

@@ -1,0 +1,22 @@
+Programa setentacincoidades;
+
+variáveis i,n,a:inteiro;
+
+Início
+  n:=1;
+
+  Para i:=1 até 75 faça
+  Início
+
+  Escreva(' Digite a idade atual em anos da pessoa ',n,' : ');
+  leia(a);
+
+  Se a>=18 então
+  escreva(' A pessoa ',n,' eh maior de idade .');
+  Se a<18 então
+  escreva(' A pessoa ',n,' eh menor de idade .');
+
+  n:=n+1;
+  fim;
+
+Fim.

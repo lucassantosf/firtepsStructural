@@ -1,0 +1,64 @@
+{ALGORITMO....:empresalucas.alg}
+{AUTOR........:Lucas Ferreira }
+{DATA.........: 30/12/2011    }
+{DESCRIÇÃO....:               }
+
+Programa empresalucas;
+    variáveis quanmin,i:inteiro;
+              minimo,total,acre,final:real;
+              nome:texto;
+Início
+    i:=0;
+    enquanto i<584 faça
+    Início
+    escreva('-----EMPRESA-LUCAS------');
+    ESCREVA('-----REAJUSTE-SALARIAL--');
+    ESCREVA(' 50% para aqueles que ganham menos do que tres salarios minimos;');
+    ESCREVA(' 20% para aqueles que ganham entre tres ate dez salarios minimos;');
+    ESCREVA(' 15% para aqueles que ganham acima de dez ate vinte salarios minimos');
+    ESCREVA(' 10% para os demais funcionarios.  ');
+    escreva(' Quanto vale um salario minimo hoje ?(EM REAIS) ');
+    leia(minimo);
+    Enquanto minimo<0 faça
+    Início
+    escreva(' Codigo invalido . Digite corretamente : ');
+    leia(minimo);
+    fim;
+    escreva(' Digite o nome do nosso socio : ');
+    leia(nome);
+    escreva(' Digite agora quantos salarios minimos recebe : ',nome);
+    leia(quanmin);
+    Enquanto quanmin<=0 faça
+    Início
+    escreva(' Codigo invalido . Digite corretamente : ');
+    leia(quanmin);
+    fim;
+    Se quanmin<3 então
+    Início
+    total:=(quanmin*minimo);
+    acre:=(total*0.50);
+    final:=(total + acre);
+    fim;
+    Se (quanmin>=3) e (quanmin<10) então
+    Início
+    total:=(quanmin*minimo);
+    acre:=(total*0.20);
+    final:=(total + acre);
+    fim;
+    Se (quanmin>=10) e (quanmin<20) então
+    Início
+    total:=(quanmin*minimo);
+    acre:=(total*0.15);
+    final:=(total + acre);
+    fim;
+    Se (quanmin>=20) então
+    Início
+    total:=(quanmin*minimo);
+    acre:=(total*0.10);
+    final:=(total + acre);
+    fim;
+    Escreva(' O socio : ',nome,' obteve um reajuste de ',acre,' reais.');
+    escreva(' Passando a receber agora : ',final,' reais. ');
+    i:=i + 1 ;
+    fim;
+    Fim.

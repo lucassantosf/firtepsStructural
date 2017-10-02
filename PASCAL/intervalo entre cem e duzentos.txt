@@ -1,0 +1,29 @@
+Programa intervalo;
+
+ variáveis num:inteiro;
+           cont:texto;
+Início
+   cont:='s';
+   enquanto cont='s' faça
+   Início
+   escreva('  Digite o numero :   ');
+   leia(num);
+   Se num>=100  então
+   Início
+   Se num<=200 então
+   escreva(' Este numero esta no intervalo 100/200 ');
+   fim;
+   Se num<100  então
+   Início
+   escreva(' Menor que 100 ');
+   fim;
+   Se num>200 então
+   Início
+   escreva(' Este numero eh maior que 200 ')
+   fim;
+   Escreva(' Deseja saber de mais algu numero ?(S/N) ');
+   leia(cont);
+   fim;
+
+
+Fim.                                      

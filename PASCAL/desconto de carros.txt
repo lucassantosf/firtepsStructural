@@ -1,0 +1,62 @@
+Programa lojadesc;
+
+ variáveis caro:inteiro;
+           ano,p:real;
+Início
+   escreva('-------------------------------------');
+   escreva('-------CONCESSIONARIA--LUCAS---------');
+   ESCREVA('   1.Monza - ano 95 - RS25.000');
+   escreva('   2.Gol quadrado - ano 98 - RS19.000 ');
+   escreva('   3.Corsa windy ano - 01 - RS20.000 ');
+   escreva('   4.Uno - ano 99 - RS12.000');
+   escreva('   5.Siena - ano 07 - RS32.000 ');
+   escreva('   6.Escort - ano 94 - RS7.000 ');
+   escreva('   7.Cross fox - ano 08 - RS36.000');
+   escreva('   8.Vectra - ano 05 - RS 30.000');
+   escreva('   9.Prisma - ano 10 - RS41.000');
+   escreva('   10.Fusca - ano 81 - RS3.000');
+   escreva(' Qual carro deseja comprar ? :( Digite o cod. ) ');
+   leia(caro);
+   Enquanto caro>10 faça
+   Início
+   Escreva(' Cod. nao existente, verifique se esta certo e digite o cod. correto : ');
+   leia(caro);
+   fim;
+   Enquanto caro<=0 faça
+   Início
+   Escreva(' Cod. nao existente, verifique se esta certo e digite o cod. correto : ');
+   leia(caro);
+   fim;
+   Se caro=1 então
+   ano:=1995
+   p:=25.000;
+   Se caro=2 então
+   ano:=1998
+   p:=19.000;
+   Se caro=3 então
+   ano:=2001
+   p:=20.000;
+   Se caro=4 então
+   ano:=1999
+   p:=12.000;
+   Se caro=5 então
+   ano:=2007
+   p:=32.000;
+   Se caro=6 então
+   ano:=1994
+   p:=7.000;
+   Se caro=7 então
+   ano:=2008
+   p:=36.000;
+   Se caro=8 então
+   ano:=2005
+   p:=30.000;
+   Se caro=9 então
+   ano:=2010
+   p:=41.000;
+   Se caro=10 então
+   ano:=1981
+   p:=3.000;
+
+
+Fim.

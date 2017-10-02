@@ -1,0 +1,20 @@
+Programa prestacao5xs/juros;
+
+ variáveis valorprodt,prest:real;
+           cont:texto;
+Início
+   cont:='s';
+   enquanto cont='s' faça
+
+   início
+   escreva(' ----------LOJA LUCAS --- 5X SEM JUROS ---CALCULO DE PRECO');
+   ESCREVA(' Quantos REAIS foram gastos na sua compra ? ');
+   leia(valorprodt);
+   prest:=valorprodt/5;
+   escreva(' Cada uma de suas cinco prestacoes tem valor de :',prest);
+   escreva(' Sr.Cliente, o senhor comprou algo mais ?(S/N) ');
+   leia(cont);
+   fim;
+
+
+Fim.                                                           

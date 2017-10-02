@@ -1,0 +1,323 @@
+algoritmo "FORCA"
+// Função :Jogo da forca
+// Autor :
+// Data : 19/11/2011
+// Seção de Declarações 
+var
+
+frases,respostas:                             vetor [0..9]  de caractere
+tamanho,ind,pergunta,erros,qtd:               inteiro
+letra,achou,novojogo,opcao,chute,sexo:        caractere
+encontrou:                                    vetor [1..20] de caractere
+resposta:                                     vetor [0..20] de caractere
+
+//Inicio dos Procedimentos
+Procedimento "limpa"
+inicio
+para ind := 1 ate tamanho faca
+   encontrou[ind]<- "_ "
+fimpara
+fimprocedimento
+
+
+Procedimento "inicializa"
+inicio
+limpatela
+erros<-0
+pergunta<- randi(10)
+resposta[0]:= respostas[pergunta]
+tamanho <- compr(resposta[0])
+limpa
+novojogo<- "S"
+fimprocedimento
+
+
+Procedimento "novo_jogo"
+inicio
+escreval(" ")
+escreva ("Deseja jogar um novo jogo? [S]im ou [N]ão? ")
+leia(novojogo)
+se novojogo = "S" entao
+   inicializa
+senao
+   escreval("Pressione ESC para encerrar o jogo.")
+fimse
+fimprocedimento
+
+
+Procedimento "fim_de_jogo"
+inicio
+escreval("FIM DE JOGO, VOCÊ PERDEU!!")
+novo_jogo
+fimprocedimento
+
+
+procedimento "desenha"
+inicio
+se erros = 1 entao
+   escreval(" ( )  ")
+fimse
+
+se erros = 2 entao
+   escreval(" ( )  ")
+   escreval(" _|_  ")
+fimse
+
+se erros = 3 entao
+   escreval(" ( )  ")
+   escreval(" _|_  ")
+   escreval("  |   ")
+fimse
+
+se erros = 4 entao
+   se sexo = "F" entao
+      escreval("                                       ________    ")
+      escreval("                                       |      |    ")
+      escreval("                                       |    mm|mm  ")
+      escreval("                                       |   m(º_º)m ")
+      escreval("                                       |   mm_Y_mm ")
+      escreval("                                       |      |    ")
+      escreval("                                       |     / \   ")
+      escreval("                                       |           ")
+      escreval("                                       |           ")
+      escreval("                                _______|_______    ")
+      fim_de_jogo
+   senao
+      escreval("                                       ________    ")
+      escreval("                                       |      |    ")
+      escreval("                                       |      |    ")
+      escreval("                                       |    (º_º)  ")
+      escreval("                                       |     _Y_   ")
+      escreval("                                       |      |    ")
+      escreval("                                       |     / \   ")
+      escreval("                                       |           ")
+      escreval("                                       |           ")
+      escreval("                                _______|_______    ")
+      fim_de_jogo
+   fimse
+fimse
+fimprocedimento
+
+procedimento "sair"
+inicio
+fimalgoritmo
+fimprocedimento
+
+
+procedimento "adaptacao"
+inicio
+se pergunta = 0 entao
+resposta[0]<- "FLAMENGO"
+resposta[1]<- "F"
+resposta[2]<- "L"
+resposta[3]<- "A"
+resposta[4]<- "M"
+resposta[5]<- "E"
+resposta[6]<- "N"
+resposta[7]<- "G"
+resposta[8]<- "O"
+fimse
+
+se pergunta = 1 entao
+resposta[0]<- "FLUMINENSE"
+resposta[1]<- "F"
+resposta[2]<- "L"
+resposta[3]<- "U"
+resposta[4]<- "M"
+resposta[5]<- "I"
+resposta[6]<- "N"
+resposta[7]<- "E"
+resposta[8]<- "N"
+resposta[9]<- "S"
+resposta[10]<- "E"
+fimse
+
+se pergunta = 2 entao
+resposta[0]<- "PALMEIRAS"
+resposta[1]<- "P"
+resposta[2]<- "A"
+resposta[3]<- "L"
+resposta[4]<- "M"
+resposta[5]<- "E"
+resposta[6]<- "I"
+resposta[7]<- "R"
+resposta[8]<- "A"
+resposta[9]<- "S"
+fimse
+
+se pergunta = 3 entao
+resposta[0]<-  "CORINTHIAS"
+resposta[1]<-  "C"
+resposta[2]<-  "O"
+resposta[3]<-  "R"
+resposta[4]<-  "I"
+resposta[5]<-  "N"
+resposta[6]<-  "T"
+resposta[7]<-  "H"
+resposta[8]<-  "I"
+resposta[9]<-  "A"
+resposta[10]<- "S"
+fimse
+
+se pergunta = 4 entao
+resposta[0]<- "CRUZEIRO"
+resposta[1]<- "C"
+resposta[2]<- "R"
+resposta[3]<- "U"
+resposta[4]<- "Z"
+resposta[5]<- "E"
+resposta[6]<- "I"
+resposta[7]<- "R"
+resposta[8]<- "O"
+fimse
+
+se pergunta = 5 entao
+resposta[0]<- "IPATINGA"
+resposta[1]<- "I"
+resposta[2]<- "P"
+resposta[3]<- "A"
+resposta[4]<- "T"
+resposta[5]<- "I"
+resposta[6]<- "N"
+resposta[7]<- "G"
+resposta[8]<- "A"
+fimse
+
+se pergunta = 6 entao
+resposta[0]<- "SPORT"
+resposta[1]<- "S"
+resposta[2]<- "P"
+resposta[3]<- "O"
+resposta[4]<- "R"
+resposta[5]<- "T"
+fimse
+
+se pergunta = 7 entao
+resposta[0]<- "NAUTICO"
+resposta[1]<- "N"
+resposta[2]<- "A"
+resposta[3]<- "U"
+resposta[4]<- "T"
+resposta[5]<- "I"
+resposta[6]<- "C"
+resposta[7]<- "O"
+fimse
+
+se pergunta = 8 entao
+resposta[0]<- "GREMIO"
+resposta[1]<- "G"
+resposta[2]<- "R"
+resposta[3]<- "E"
+resposta[4]<- "M"
+resposta[5]<- "I"
+resposta[6]<- "O"
+fimse
+
+se pergunta = 9 entao
+resposta[0]<- "INTERNACIONAL"
+resposta[1]<- "I"
+resposta[2]<- "N"
+resposta[3]<- "T"
+resposta[4]<- "E"
+resposta[5]<- "R"
+resposta[6]<- "N"
+resposta[7]<- "A"
+resposta[8]<- "C"
+resposta[9]<- "I"
+resposta[10]<- "O"
+resposta[11]<- "N"
+resposta[12]<- "A"
+resposta[13]<- "L"
+fimse
+fimprocedimento
+
+inicio
+escreva("Você é do sexo [M]asculino ou [F]eminino? ")
+leia(sexo)
+achou<- "N"
+novojogo<- "S"
+
+frases[0]:="É UM TIME DE FUTEBOL DO RIO DE JANEIRO"
+frases[1]:="É UM TIME DE FUTEBOL DO RIO DE JANEIRO"
+frases[2]:="É UM TIME DE FUTEBOL DE SÃO PAULO"
+frases[3]:="É UM TIME DE FUTEBOL DE SÃO PAULO"
+frases[4]:="É UM TIME DE FUTEBOL DE MINAS GERAIS"
+frases[5]:="É UM TIME DE FUTEBOL DE MINAS GERAIS"
+frases[6]:="É UM TIME DE FUTEBOL DE PERNAMBUCO"
+frases[7]:="É UM TIME DE FUTEBOL DE PERNAMBUCO"
+frases[8]:="É UM TIME DE FUTEBOL DO RIO GRANDE DO SUL"
+frases[9]:="É UM TIME DE FUTEBOL DO RIO GRANDE DO SUL"
+
+respostas[0]:="FLAMENGO"
+respostas[1]:="FLUMINENSE"
+respostas[2]:="PALMEIRAS"
+respostas[3]:="CORINTHIAS"
+respostas[4]:="CRUZEIRO"
+respostas[5]:="IPATINGA"
+respostas[6]:="SPORT"
+respostas[7]:="NAUTICO"
+respostas[8]:="GREMIO"
+respostas[9]:="INTERNACIONAL"
+inicializa
+repita
+se novojogo = "S" entao
+   adaptacao
+   limpatela
+   escreval("Jogo da Forca V1.0")
+   escreval(frases[pergunta])
+   se erros > 0 entao
+      desenha
+   fimse
+   para ind := 1 ate tamanho faca
+      escreva(encontrou[ind])
+   fimpara
+   escreval(" ")
+   escreval(" ")
+   escreval("[1] Quero chutar uma letra")
+   escreval("[2] Quero chutar a palavra")
+   escreval("[3] Sair")
+   escreva("A opção escolhida é: ")
+   leia(opcao)
+   se opcao = "2" entao
+      escreva("Digite a palavra: ")
+      leia(chute)
+      se resposta[0] = chute entao
+         escreval("Parabens, você acertou!")
+         novo_jogo
+      senao
+         escreval("Infelizmente, você errou!")
+         erros<- 4
+         desenha
+      fimse
+   fimse
+   se opcao = "3" entao
+      sair
+   fimse
+   se opcao = "1" entao
+      escreva("Digite uma letra: ")
+      leia(letra)
+      para ind:= 1 ate tamanho faca
+         se letra = resposta[ind] entao
+            achou<- "S"
+            encontrou[ind]<- letra
+            qtd<- qtd+1
+            se tamanho = qtd entao
+               escreval(resposta[0])
+               escreval("Parabéns, você acertou!")
+               novo_jogo
+            fimse
+         fimse
+      fimpara
+   fimse
+   se achou = "N" entao
+      erros<- erros+1
+      desenha
+   fimse
+   achou<- "N"
+fimse
+se novojogo = "N" entao
+   sair
+fimse
+fimrepita ate novojogo = "N"
+fimalgoritmo
+

@@ -1,0 +1,28 @@
+Programa hasta5;
+
+ variáveis num:real;
+           cont:texto;
+Início
+ cont:='s';
+ enquanto cont='s' faça
+ Início
+ escreva(' Digite um numero de 1 a 5 : ');
+ leia(num);
+ Se num<=0 então
+ escreva(' Vc nao sabe ler neh, eh muito burro. ');
+ Se num>5 então
+ escreva(' Vc nao sabe ler neh, eh muito burro. ');
+ Se (num<=5) e (num>0) então
+ escreva(' Parabens !!!!!!!, vc sabe ler .  ');
+ escreva(' Deseja fazer outro teste ? (S/N) ');
+ leia(cont);
+ Enquanto (cont<>'s') e (cont<>'n') faça
+ Início
+ escreva(' Vc nao sabe ler ? Digite resposta correta : ');
+ leia(cont);
+ fim;
+ fim;
+
+
+
+Fim.

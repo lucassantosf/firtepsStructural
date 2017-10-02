@@ -1,0 +1,19 @@
+Programa Area_Triangulo;
+Variáveis
+    area,altura,base:real;
+    r:char;
+Início
+  r:='s';
+  enquanto r='s'  faça
+  Início
+  escreva('   Digite a altura do triangulo: ');
+  Leia(altura);
+  escreva('  Digite a base do triangulo: ');
+  leia(base);
+  area := ((altura)*(base)/2);
+  escreva('A area do triângulo es igual a: ',area);
+  escreva('  Repetir processo ?(s/n) ');
+  leia(r);
+  fim;
+
+Fim.                       

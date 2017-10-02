@@ -1,0 +1,32 @@
+Programa nomesexo;
+
+ variáveis nome:char;
+           n,s,macho,fema:inteiro;
+Início
+   macho:=0;
+   fema:=0;
+   Para n:=1 até 56 faça
+   Início
+   Escreva(' Digite o nome da pessoa ',n,' : ');
+   leia(nome);
+   Escreva(' Qual o sexo dessa pessoa , escolha : ');
+   Escreva(' [1] Sexo Masculino ');
+   Escreva(' [2] Sexo Feminino  ');
+   leia(s);
+   Enquanto s>=3 faça
+   Início
+   Escreva(' Sr.Usuario, digite corretamente o sexo : ');
+   Escreva(' [1] Sexo Masculino ');
+   Escreva(' [2] Sexo Feminino  ');
+   leia(s)
+   fim;
+   Se s=1 então
+   macho:=macho + 1 ;
+   Se s=2 então
+   fema:=fema + 1;
+   fim;
+   Escreva(' O numero total de mulheres nesta pesquisa eh de : ',fema);
+   Escreva(' O numero total de homens nesta pesquisa eh de : ',macho);
+
+
+Fim.

@@ -1,0 +1,45 @@
+Programa Crescente;
+
+
+
+uses crt;
+
+var
+numero : array[1..5] of integer;
+i,j,x : integer;
+z:string;
+
+begin
+z:='s';
+while z='s' do
+begin
+for i:= 1 to 5 do begin
+writeln('Digite o ',i,' numero : ');
+readln(numero[i]);
+
+end;
+
+for i:=1 to 5 do begin
+for j:= i+1 to 5 do begin
+if ( numero[i] > numero[j] ) then
+begin
+X := numero[i];
+numero[i] := numero[j];
+numero[j] := x;
+end
+end;
+end;
+
+writeln('Os numeros em ordem s∆o : ');
+for i:= 1 to 5 do begin
+
+write(numero[i],' ');
+                                             
+end;
+write('');
+writeln(' Deseja realizar algum outro processo (s/n)');
+readln(z);
+
+end;
+
+end.

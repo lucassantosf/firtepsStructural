@@ -1,0 +1,19 @@
+{ALGORITMO....: Novo.alg      }
+{AUTOR........:               }
+{DATA.........: 30/10/2011    }
+{DESCRIÇÃO....:               }
+
+program p;
+uses dos;
+
+var dia, mes, ano, diasem: word;
+hora, min, seg, mili: word;
+
+begin
+getdate(ano, mes, dia, diasem);
+writeln(dia, '/', mes, '/', ano);
+
+gettime(hora, min, seg, mili);
+writeln(hora, ':', min, ':', seg);
+readln;
+end.                                         

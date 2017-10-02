@@ -1,0 +1,26 @@
+Programa ointentanum;
+
+ variáveis x,num,intervalo:inteiro;
+
+Início
+   intervalo:=0;
+   x:=1;
+   Enquanto x<81 faça
+   Início
+   escreva(' Digite o ',x,' º numero : ') ;
+   leia(num);
+
+
+   Se num >= 10 então
+   Início
+   Se num<=150 então
+   intervalo:=intervalo + 1 ;
+   fim;
+   x:=x + 1;;
+   fim;
+   Escreva(' A quantidade de numeros no intervalo 10/150 eh de : ',intervalo);
+
+
+
+
+Fim.

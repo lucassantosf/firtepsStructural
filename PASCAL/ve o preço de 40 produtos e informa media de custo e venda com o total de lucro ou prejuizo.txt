@@ -1,0 +1,48 @@
+Program lojalucas ;
+ var c,v,lucro,m,mcus,soma,soma2,mven,lucrot,soma3:real;
+     estad,estad2:string;
+     i:real;
+     cont:integer;
+ Begin
+ i:=0;
+ mcus:=0;
+ mven:=0;
+ soma:=0;
+ soma2:=0;
+ soma3:=0;
+ cont:=0;
+ while cont<40 do
+ begin
+ cont:=cont+1;
+ writeln('  Digite o preço de custo do produto ',cont, ' em reais : ');
+ readln(c);
+ writeln('  Digite o preço de venda do produto ',cont, ' em reais : ');
+ readln(v);
+ lucro:= ( v - c );
+ If lucro=0 then
+ estad:=' empate ';
+ If lucro>0 then
+ estad:=' lucro ';
+ If lucro<0 then
+ estad:=' prejuizo ';
+ writeln(' Este produto esta nos dando : ',estad);
+ m:=( ( c + v ) / 2 ) ;
+ i:= i + 1 ;
+ soma:= ( soma + c );
+ mcus:= ( soma / i );
+ soma2:= ( soma2 + v );
+ mven:= ( soma2 / i );
+ soma3:= (soma3 + lucro);
+ lucrot:= (soma3 / i);
+ If lucrot=0 then
+ estad2:=' empate ';
+ If lucrot>0 then
+ estad2:=' lucro ';
+ If lucrot<0 then
+ estad2:=' prejuizo ';
+ end; 
+ writeln(' ---------------------------------------------------- ');
+ writeln(' Media de custo ao total : ',mcus);
+ writeln(' Media de venda ao total : ',mven);
+ writeln(' Ao todo tivemos : ',estad2);
+ End.

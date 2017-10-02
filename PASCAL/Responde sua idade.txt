@@ -1,0 +1,64 @@
+program p;
+uses dos;
+
+var dia, mes, ano, diasem: word;
+hora, min, seg, mili: word;
+anonas,mesnas,dianas,result3:inteiro;
+Início
+getdate(ano, mes, dia, diasem);
+writeln(dia, '/', mes, '/', ano);
+
+gettime(hora, min, seg, mili);
+writeln(hora, ':', min, ':', seg);
+
+ escreva(' Digite o ano em q nasceu : ');
+ leia(anonas);
+ escreva(' Digite o mes em q vc nasceu : ');
+ leia(mesnas);
+ enquanto mesnas>12 faça
+ início
+ escreva(' Mes ate 12 , digite corretamente ');
+ leia(mesnas);
+ fim;
+ escreva(' Digite o dia em q vc nasceu :  ');
+ leia(dianas);
+ enquanto dianas>31 faça
+ início
+ escreva(' Mes vai ate 31, digite corretamente ');
+ leia(dianas);
+ fim;
+Se mes>mesnas então
+ Início
+ result3:=ano-anonas;
+ escreva(' Vc tem  ',result3,'  anos');
+ fim;
+
+
+
+
+Se mesnas=mes então
+ Início
+ Início
+ se dia=dianas então
+ escreva(' Feliz Aniversario ');
+ fim;
+ Se dia>dianas então
+ início
+ mesnas:=mesnas;
+ result3:=ano-anonas;
+ escreva(' Vc tem  ',result3,'  anos');
+ fim;
+ Se dia<dianas então
+ Início
+ mesnas:=mesnas-1;
+ result3:=((ano-anonas)-1);
+ escreva(' Vc tem  ',result3,'  anos');
+ fim;
+
+ fim;
+Se mesnas>mes então
+ Início
+ result3:=((ano-anonas)-1);
+ escreva(' Vc tem  ',result3,'  anos');
+ fim;
+Fim.

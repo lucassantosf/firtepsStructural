@@ -1,0 +1,28 @@
+Programa lojalucas;
+
+ variáveis  salarioi,vendas:inteiro;
+            comisao,salariof:real;
+            nomevendedor:texto;
+            cont:texto;
+
+Início
+   escreva('  ----------------CALCULO DE SALARIO LOJA LUCAS--------- ');
+   cont:='s';
+   enquanto cont='s' faça
+   Início
+   escreva(' Digite o nome do nosso socio :');
+   leia(nomevendedor);
+   escreva(' Digite o salario fixo (em reais):');
+   leia(salarioi);
+   escreva(' Digite as vendas feitas pelo socio ',nomevendedor,' em reais :');
+   leia(vendas);
+   comisao := 0.15 * vendas;
+   salariof:=salarioi + comisao;
+   escreva(' O salario final a ser pago a ',nomevendedor,' eh RS',salariof);
+   escreva(' Deseja calcular outro salario ? (S/N)');
+   leia(cont);
+
+
+
+   fim;
+Fim.

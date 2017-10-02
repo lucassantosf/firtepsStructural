@@ -1,0 +1,39 @@
+{ALGORITMO....: Novo.alg      }
+{AUTOR........:               }
+{DATA.........: 10/09/2011    }
+{DESCRIÇÃO....:               }
+
+Programa Novo;
+
+TYPE vetortexto=array[1..5] de char;
+TYPE vetornumero=array[1..5] de inteiro;
+
+variáveis
+nome : vetor[1..5] de texto;
+idade: vetor[1..5] de inteiro;
+profisao: vetor[1..5] de texto;
+i,n: inteiro;
+continua: texto;
+Início
+
+  Para i:=1 até 5 faça
+  início
+  leia(nome[i]);
+  leia(idade[i]);
+  leia(profisao[i]);
+  fim;
+  continua:='s';
+  Enquanto continua='s' faça
+  Início
+  escreva('numero de cadastro');
+  leia(n);
+  escreva('O pesquisado é',(nome[n]));
+  escreva(' de idade ',(idade[n]));
+  escreva(' e trabalha como',(profisao[n]) );
+  escreva('deseja fazer outra consulta? (s/n)');
+  Leia(continua);
+  fim;
+
+
+
+Fim.

@@ -1,0 +1,43 @@
+Programa impostossobrecarro;
+
+ variáveis  va:real;
+            id,carro:real;
+            escol:inteiro;
+            n:real;
+            cont:texto;
+Início
+   escreva(' -----VALOR-DE-CUSTOS-DE-CARRO-COM-IMPOSTOS---- ');
+   cont:='s';
+   enquanto cont='s' faça
+   início
+   escreva(' VALOR DE FA´BRICA ');
+   escreva('         I I  ');
+   escreva('         I I  ');
+   escreva('          V ');
+   escreva(' 1.Corsa Classic ______RS20.000 ');
+   escreva(' 2.Gol geracao 5 ______RS30.000 ');
+   escreva(' 3.Golf gti ___________RS40.000 ');
+   escreva('  Qual carro comprado ?:(1/2/3)');
+   leia(escol);
+   Enquanto escol>3 faça
+   início
+   escreva(' Impossivel, valor informado nao existe. Digite valor correto(1/2/3): ');
+   leia(escol);
+   fim;
+   Se escol=1 então
+   carro:=20000;
+   Se escol=2 então
+   carro:=30000;
+   Se escol=3 então
+   carro:=40000;
+
+   id:=carro+(0.28 * carro);
+   n:=id+(0.45*id);
+   va:=n;
+   escreva(' Valor do carro numero ',escol,' eh de :',va);
+   escreva('  Deseja sabe o valor de outro carro ?(S/N)  ');
+   leia(cont);
+
+
+   fim;
+Fim.

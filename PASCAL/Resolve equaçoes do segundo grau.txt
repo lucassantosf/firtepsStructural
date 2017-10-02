@@ -1,0 +1,41 @@
+Programa Equacao_do_Segundo_Grau; uses Crt;
+variáveis a,b,c : Inteiro;
+ delta : Real;
+ x1,x2 : Real;
+ cont: texto;
+Início ClrScr;
+   cont:='s';
+   enquanto cont='s' faça
+   Início
+   escreva ('Equacao do Segundo Grau');
+   escreva; escreva (' 2');          
+   escreva ('aX +bx+c=0'); escreva;
+   escreva ('Entre com o valor de A:'); leia (a);
+   escreva ('Entre com o valor de B:');   leia (b);
+   escreva ('Entre com o valor de C:');   leia (c);
+   delta := (b*b)-4*a*c;
+   escreva(' Valor de delta é   ',delta:5:2);
+   Se delta > 0 então
+     Início
+    x1 := -b+sqrt(delta)/(2*a);
+    x2 := -b-sqrt(delta)/(2*a);
+       escreva ('Dois resultados reais.');
+       escreva ('x1 = ',x1:6:2);
+       escreva('x2 = ',x2:6:2);
+    fim
+    senão
+    Se delta < 0 então
+       Início
+        escreva ('Nao ha resultado real');
+        fim
+        senão
+        Início escreva ('Um resultado real.');
+          x1 := -b/(2*a);
+        escreva ('x = ',x1:6:2);
+        fim;
+        escreva(' Deseja realizar outro calculo ? (s/n)');
+        leia(cont);
+
+        fim;
+
+ Fim.

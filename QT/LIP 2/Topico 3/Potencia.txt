@@ -1,0 +1,6 @@
+
+Base : 5.00 
+
+Expoente : 6.00
+
+Potencia : 15625.00

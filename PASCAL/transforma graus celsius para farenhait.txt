@@ -1,0 +1,16 @@
+Programa grauscelforfaren;
+
+ variáveis f,c:real;
+           cont:texto;
+Início
+   cont:='s';
+   enquanto cont='s' faça
+   início
+   escreva(' Digite uma temperatura em graus CELSIUS :');
+   leia(c);
+   f:=(9*c+160) / 5;
+   escreva(' A temperatura',c,'ºC em Fahrenheit eh',f,'ºF');
+   escreva(' Deseja fazer outra conversao ?(S/N)');
+   leia(cont);
+   fim;
+Fim.

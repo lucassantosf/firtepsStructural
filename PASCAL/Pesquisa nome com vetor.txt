@@ -1,0 +1,165 @@
+{ALGORITMO....:anda2.alg      }
+{AUTOR........:Lucas Ferreira }
+{DATA.........: 01/11/2011    }
+{DESCRIÇÃO....:               }
+
+Programa Novo;
+uses dos;
+TYPE vetortexto=array[1..5] de char;
+TYPE vetornumero=array[1..5] de inteiro;
+
+variáveis
+nome : vetor[1..5] de texto;
+telefone: vetor[1..5] de char;
+anonas: vetor[1..5] de inteiro;
+result1: vetor[1..5] de inteiro;
+mesnas: vetor[1..5] de inteiro;
+dianas: vetor[1..5] de inteiro;
+i,n: inteiro;
+continua: texto;
+dia, mes, ano, diasem: word;
+result2: vetor[1..5] de inteiro;
+result3: vetor[1..5] de inteiro;
+
+Início
+  getdate(ano, mes, dia, diasem);
+  Para i:=1 até 5 faça
+  início
+  Escreva(' Digite nome : ');
+  leia(nome[i]);
+  Escreva(' Digite agora somente o ano em que nasceu :  ');
+  leia(anonas[i]);
+  escreva(' Digite mes de nascimento : ');
+  leia(mesnas[i]);
+  enquanto mesnas[i]>12 faça
+  Início
+  escreva(' Mes vai ate 12 ,digite corretamente ');
+  leia(mesnas[i]);
+  fim;
+  escreva(' Digite dia de nascimento ');
+  leia(dianas[i]);
+  enquanto dianas[i]>31 faça
+  início
+  escreva(' Dia vai ate 31,digite corretamente ');
+  leia(dianas[i]);
+  fim;
+
+
+ Se mes>mesnas[i] então
+ Início
+ result3[i]:=ano-anonas[i];
+
+ fim;
+
+
+
+
+Se mesnas[i]=mes então
+ Início
+ Início
+ se dia=dianas[i] então
+ result3[i]:=ano-anonas[i];
+ fim;
+ Se dia>dianas[i] então
+ início
+ mesnas[i]:=mesnas[i];
+ result3[i]:=ano-anonas[i];
+
+ fim;
+ Se dia<dianas[i] então
+ Início
+ mesnas[i]:=mesnas[i]-1;
+ result3[i]:=(ano-anonas[i])-1;
+
+ fim;
+
+ fim;
+Se mesnas[i]>mes então
+ Início
+ result3[i]:=(ano-anonas[i])-1;
+
+ fim;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Se (result3[i]>18) então
+  início
+  Escreva(' Digite o telefone que usa : ');
+  leia(telefone[i]);
+  fim;
+ fim;
+
+
+continua:='s';
+  Enquanto continua='s' faça
+início
+
+
+  escreva('Numero de cadastro');
+  leia(n);
+
+  Enquanto (n>5) faça
+  Início
+  escreva(' Cadastro vai no maximo ate 5 ! ! ! ');
+  leia(n);
+  fim;
+
+ Se (result3[n]>18) então
+  Início
+  escreva('O pesquisado es ',( nome[n] ),'.');
+  escreva(' De telefone ',  ( telefone[n] ));
+  escreva(' Atualmente esta pessoa tem  ',result3[n], ' anos. ');
+  escreva(' E faz aniversario em  ',(  dianas[n] ),'/',( mesnas[n] ),'/',( anonas[n] ));
+
+  fim;
+
+
+  Se (0<result3[n]) e (result3[n]<18) então
+  Início
+  escreva(' O pesquisado es  ' , nome[n],'.');
+  escreva(' Esta pessoa es menor de idade ainda, portanto nao possui telefone fixo ainda. ');
+  escreva(' E faz aniversario em  ',(  dianas[n] ),'/',( mesnas[n]),'/',( anonas[n] ) );
+  escreva(' Atualmente esta pessoa tem  ',result3[n], ' anos. ');
+  fim;
+
+  Se (0>result3[n]) então
+  Início
+  escreva(' O pesquisado es  ' , nome[n],'.');
+  escreva(' Esta pessoa nao existe ainda, portanto nao tem telefone fixo e nao faz aniversario. ');
+  fim;
+  escreva('Deseja fazer outra consulta? (s/n)');
+  Leia(continua);
+  Enquanto (continua<>'s') e (continua<>'n') faça
+  Início
+  escreva (' Sr.Usuario, voce nao tem digitado (s/n), voce quer continuar ? ');
+  leia(continua);
+  fim;
+
+ fim;
+Fim.
+

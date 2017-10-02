@@ -1,0 +1,33 @@
+Program Equacao_do_Segundo_Grau; uses Crt; 
+var a,b,c : Integer; 
+ delta : Real;
+ x1,x2 : Real;
+begin ClrScr;
+   WriteLn ('Equacao do Segundo Grau');
+   WriteLn; WriteLn (' 2');
+   WriteLn ('aX +bx+c=0'); WriteLn;
+   Write ('Entre com o valor de A:'); ReadLn (a);
+   Write ('Entre com o valor de B:'); ReadLn (b); 
+   Write ('Entre com o valor de C:'); ReadLn (c);  
+   delta := b*b-4*a*c;   
+   Write(' Valor de delta é   ',delta:5:2);
+   if delta > 0 then 
+     begin 
+	x1 := (-b+sqrt(delta))/(2*a);
+	x2 := (-b-sqrt(delta))/(2*a);
+	   WriteLn ('Dois resultados reais.'); 
+	   WriteLn ('x1 = ',x1:6:2); 
+	   WriteLn('x2 = ',x2:6:2);
+	end 
+	else 
+	if delta < 0 then 
+	   begin
+	    WriteLn ('Nao ha resultado real');
+	    end 
+	    else
+	    begin WriteLn ('Um resultado real.');
+	      x1 := (-b)/(2*a);
+		 WriteLn ('x = ',x1:6:2); 
+		end; 
+
+ End.

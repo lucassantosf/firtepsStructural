@@ -1,0 +1,22 @@
+Programa realdolar;
+
+ variáveis cotacao,reais:real;
+           cont:texto;
+           dolar:real;
+Início
+   escreva(' --------- COTACAO DO DOLAR ----------- ');
+   cont:='s';
+   enquanto cont='s' faça
+
+   Início
+   escreva(' Qual a cotacao do dolar atual em reais ?');
+   leia(cotacao);
+   escreva(' Quantos dolares vc possui ? ');
+   leia(dolar);
+   reais:= dolar*cotacao;
+   escreva(' Seus dolares valem atualmente em reais : ',reais);
+   escreva(' Deseja continuar ? (S/N)');
+   leia(cont);
+   fim;
+
+Fim.

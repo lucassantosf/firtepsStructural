@@ -1,0 +1,28 @@
+program p;
+uses dos;
+
+var dia, mes, ano, diasem: word;
+hora, min, seg, mili: word;
+ continua:texto;
+ year,resultado:inteiro;
+Início
+  continua:='s';
+  Enquanto continua='s' faça
+  início
+  getdate(ano, mes, dia, diasem);
+
+
+  gettime(hora, min, seg, mili);
+
+  Escreva(' Qual ano q vc nasceu? ');
+  leia(year);
+  resultado:=ano-year;
+  escreva(' Sua idade es  ',resultado );
+  Se (resultado<18) então
+  escreva(' Voce es menor de idade ');
+  Se (resultado<0) então
+  escreva(' Impossivel, voce nao existe ainda! ');
+  Escreva(' Repetir processo ? (s/n)');
+  leia(continua);
+  fim;
+fim.

@@ -1,0 +1,45 @@
+{ALGORITMO....: lojalucas.alg }
+{AUTOR........: Lucas Ferreira}
+{DATA.........: 30/12/2011    }
+{DESCRIÇÃO....:               }
+
+Programa lojalucas;
+   variáveis      comb:inteiro;
+                  v,desc,final:real;
+Início
+   v:=1;
+   enquanto v<>0 faça
+   Início
+   escreva('-----------------LOJA---LUCAS-------  ');
+   escreva('-----------------DESCONTOS-------  ');
+   escreva('-----------------DIGITE-------  ');
+   escreva('---1 - Veiculo movido a gasolina   ------  ');
+   escreva('---2 - Veiculo movido a alcool   ------  ');
+   escreva('---3 - Veiculo movido a diesel   ------  ');
+   leia(comb);
+   Enquanto (comb<0) ou (comb>=4) faça
+   Início
+   escreva(' Codigo invalido , digite corretamente seu codigo : ');
+   leia(comb);
+   fim;
+   escreva(' Qual o valor do seu veiculo ? (DIGITE EM REAIS) : ');
+   leia(v);
+   Se comb=1 então
+   Início
+   desc := ( v * 0.25 );
+   final := ( v - desc );
+   fim;
+   Se comb=2 então
+   Início
+   desc := ( v * 0.21 );
+   final := ( v - desc );
+   fim;
+   Se comb=3 então
+   Início
+   desc := ( v * 0.14 );
+   final := ( v - desc );
+   fim;
+   escreva(' O valor final a ser pago pelo nosso cliente  ');
+   escreva(' Eh de : ',final,' reais . Diante nosso desconto. ');
+   fim;
+Fim.
